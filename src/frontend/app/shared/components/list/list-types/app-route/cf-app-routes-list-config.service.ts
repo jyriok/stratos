@@ -87,22 +87,22 @@ export class CfAppRoutesListConfigService implements IListConfig<APIResource> {
     action: () => {
       this.appService.application$
         .pipe(
-        take(1),
-        tap(app => {
-          this.store.dispatch(
-            new RouterNav({
-              path: [
-                'applications',
-                this.appService.cfGuid,
-                this.appService.appGuid,
-                'add-route'
-              ],
-              query: {
-                spaceGuid: app.app.entity.space_guid
-              }
-            })
-          );
-        })
+          take(1),
+          tap(app => {
+            this.store.dispatch(
+              new RouterNav({
+                path: [
+                  'applications',
+                  this.appService.cfGuid,
+                  this.appService.appGuid,
+                  'add-route'
+                ],
+                query: {
+                  spaceGuid: app.app.entity.space_guid
+                }
+              })
+            );
+          })
         )
         .subscribe();
     },
@@ -118,32 +118,21 @@ export class CfAppRoutesListConfigService implements IListConfig<APIResource> {
       columnId: 'route',
       headerCell: () => 'Route',
       cellComponent: TableCellRouteComponent,
-      cellFlex: '4',
-      sort: {
-        type: 'sort',
-        orderKey: 'route',
-        field: 'entity.host'
-      }
+      cellFlex: '4'
     },
     {
       columnId: 'tcproute',
       headerCell: () => 'TCP Route',
       cellComponent: TableCellTCPRouteComponent,
-      cellFlex: '4',
-      sort: {
-        type: 'sort',
-        orderKey: 'tcproute',
-        field: 'entity.isTCPRoute'
-      },
+      cellFlex: '4'
     }
   ];
 
-  pageSizeOptions = [5, 15, 30];
+  pageSizeOptions = [9, 45, 90];
   viewType = ListViewTypes.TABLE_ONLY;
   text = {
     title: 'Routes'
   };
-  isLocal = true;
 
   dispatchDeleteAction(route) {
     return this.store.dispatch(
@@ -180,9 +169,7 @@ export class CfAppRoutesListConfigService implements IListConfig<APIResource> {
       this.store,
       this.appService,
       new GetAppRoutes(appService.appGuid, appService.cfGuid),
-      getPaginationKey('route', appService.cfGuid, appService.appGuid),
-      false,
-      this
+      getPaginationKey('route', appService.cfGuid, appService.appGuid)
     );
   }
 
