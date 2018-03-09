@@ -54,11 +54,6 @@ import {
   EventTabActorIconPipe,
 } from './components/list/list-types/app-event/table-cell-event-action/event-tab-actor-icon.pipe';
 import { CfOrgCardComponent } from './components/list/list-types/cf-orgs/cf-org-card/cf-org-card.component';
-import {
-  SecurityRuleComponent,
-} from './components/list/list-types/cf-security-groups/cf-security-groups-card/security-rule/security-rule.component';
-CfSpacePermissionCellComponent, ;
-} from; './components/list/list-types/cf-users/cf-space-permission-cell/cf-space-permission-cell.component';
 import { ListComponent } from './components/list/list.component';
 import { ListConfig } from './components/list/list.component.types';
 import { LoadingPageComponent } from './components/loading-page/loading-page.component';
@@ -154,7 +149,6 @@ import { ValuesPipe } from './pipes/values.pipe';
     BooleanIndicatorComponent,
     CardCfSpaceUsageComponent,
     CardCfSpaceDetailsComponent,
-    SecurityRuleComponent,
     BooleanIndicatorComponent,
     AppChipsComponent
   ],

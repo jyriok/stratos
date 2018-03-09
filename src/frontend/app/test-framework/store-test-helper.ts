@@ -34,7 +34,7 @@ const testInitialStoreState: AppState = {
                 admin: true
               },
               type: ''
-            },5cdf0acf390951485e479ffca991030142392480
+            },
             '521a9d96-2d6c-4d94-a555-807437ab106d': {
               guid: '521a9d96-2d6c-4d94-a555-807437ab106d',
               name: 'SCF',
@@ -102,8 +102,6 @@ const testInitialStoreState: AppState = {
     pagination: {
       featureFlag: {},
       securityGroup:{},
-      securityGroup:{},
-      featureFlag: {},
       buildpack: {},
       application: {
         applicationWall: {
@@ -591,14 +589,6 @@ const testInitialStoreState: AppState = {
       featureFlag: {},
       securityRule:{},
       buildpack:{},
-      securityGroup:{},
-      securityRule:{},
-      featureFlag: {},
-      buildpack:{},
-      service:{},
-      serviceBinding:{},
-      servicePlan: {},
-      serviceInstance: {},
       user: {
         'bcf78136-6225-4515-bf8e-a32243deea0c': {
           fetching: false,
