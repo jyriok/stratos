@@ -7,8 +7,8 @@ import {
   generateTestCfEndpointService,
 } from '../../../../../../test-framework/cloud-foundry-endpoint-service.helper';
 import { CfSecurityGroupsCardComponent } from './cf-security-groups-card.component';
-import { SecurityRuleComponent } from './security-rule/security-rule.component';
 import { BooleanIndicatorComponent } from '../../../../boolean-indicator/boolean-indicator.component';
+import { AppChipsComponent } from '../../../../chips/chips.component';
 
 describe('CfSecurityGroupsCardComponent', () => {
   let component: CfSecurityGroupsCardComponent;
@@ -16,7 +16,7 @@ describe('CfSecurityGroupsCardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [CfSecurityGroupsCardComponent, getMetadataCardComponents, SecurityRuleComponent, BooleanIndicatorComponent],
+      declarations: [CfSecurityGroupsCardComponent, getMetadataCardComponents, BooleanIndicatorComponent, AppChipsComponent],
       imports: [...getBaseTestModulesNoShared],
       providers: [BaseCF, generateTestCfEndpointService()]
     })

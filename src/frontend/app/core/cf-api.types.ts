@@ -162,6 +162,25 @@ export interface IDomain {
   router_group_type?: any;
 }
 
+export interface IStack {
+  name: string;
+  description: string;
+}
+
+export interface IBuildpack {
+  name: string;
+  position: number;
+  enabled: boolean;
+  locked: boolean;
+  filename: string;
+}
+
+export interface IFeatureFlag {
+  name: string;
+  enabled: boolean;
+  url?: string;
+  error_message?: string;
+}
 export interface IServiceInstance {
   guid: string;
   cfGuid: string;
@@ -214,10 +233,12 @@ export interface IUpdateOrganization {
   quota_definition_guid?: string;
   default_isolation_segment_guid?: string;
 }
+
 export interface IStack {
   name: string;
   description: string;
 }
+
 export interface IInfo {
   name: string;
   build: string;

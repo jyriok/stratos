@@ -57,6 +57,8 @@ import { CfOrgCardComponent } from './components/list/list-types/cf-orgs/cf-org-
 import {
   SecurityRuleComponent,
 } from './components/list/list-types/cf-security-groups/cf-security-groups-card/security-rule/security-rule.component';
+CfSpacePermissionCellComponent, ;
+} from; './components/list/list-types/cf-users/cf-space-permission-cell/cf-space-permission-cell.component';
 import { ListComponent } from './components/list/list.component';
 import { ListConfig } from './components/list/list.component.types';
 import { LoadingPageComponent } from './components/loading-page/loading-page.component';
@@ -146,15 +148,15 @@ import { ValuesPipe } from './pipes/values.pipe';
     MetaCardItemComponent,
     MetaCardKeyComponent,
     MetaCardValueComponent,
-    CfOrgCardComponent,
     NestedTabsComponent,
     CardCfOrgUsageComponent,
     CardCfOrgUserDetailsComponent,
+    BooleanIndicatorComponent,
     CardCfSpaceUsageComponent,
     CardCfSpaceDetailsComponent,
-    AppChipsComponent,
     SecurityRuleComponent,
-    BooleanIndicatorComponent
+    BooleanIndicatorComponent,
+    AppChipsComponent
   ],
   exports: [
     FormsModule,
@@ -207,7 +209,8 @@ import { ValuesPipe } from './pipes/values.pipe';
     CardCfOrgUserDetailsComponent,
     CardCfSpaceUsageComponent,
     CardCfSpaceDetailsComponent,
-
+    CardCfOrgUserDetailsComponent,
+    AppChipsComponent
   ],
   entryComponents: [
     AppEventDetailDialogComponentComponent,
